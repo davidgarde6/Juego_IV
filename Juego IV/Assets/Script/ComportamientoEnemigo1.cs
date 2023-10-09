@@ -8,8 +8,6 @@ public class ComportamientoEnemigo1 : MonoBehaviour
     public float velocidad;
     public float distanciaPersecucion = 6.0f;
     public Rigidbody2D rb;
-    public int vida = 1;
-
     public ZonaDeteccion zonaDeteccion;
 
     private float horizontal;

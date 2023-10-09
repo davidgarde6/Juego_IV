@@ -105,7 +105,10 @@ MonoBehaviour:
   collider: {fileID: 0}
   objetosDetectados: []
   cargaAtaque: 2
+  ataqueActivo: 3
   cooldownAtaque: 3
+  zona1: {fileID: 0}
+  zona2: {fileID: 0}
 --- !u!1 &4097982201664062646
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,9 +119,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3599993625980860634}
   - component: {fileID: 6447801401951773787}
+  - component: {fileID: 2277735037388759369}
   m_Layer: 0
   m_Name: Planta
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,3 +195,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2277735037388759369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097982201664062646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af4c3ed3d259b34db73c7aeae8dc6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1

@@ -8,7 +8,10 @@ public class ControladorJugador : MonoBehaviour
     public Rigidbody2D rb;
     public float cooldownGolpe = 2.0f;
     public float cooldownMovimiento = 0.25f;
+    public AtaqueEspada ataqueEspada;
+    public SpriteRenderer sprite;
 
+    private float moverX, moverY;
     private Vector2 dirMovimiento;
 
     // Update is called once per frame
@@ -31,8 +34,8 @@ public class ControladorJugador : MonoBehaviour
     void ProcesarEntradas()
     {
 
-        float moverX = Input.GetAxisRaw("Horizontal");
-        float moverY = Input.GetAxisRaw("Vertical");
+        moverX = Input.GetAxisRaw("Horizontal");
+        moverY = Input.GetAxisRaw("Vertical");
 
         
         if (Input.GetKeyDown(KeyCode.Space) && cooldownGolpe <= 0)
@@ -50,8 +53,18 @@ public class ControladorJugador : MonoBehaviour
     void Golpear()
     {
 
-        Debug.Log("Golpea");
-        cooldownGolpe = 2.0f;
+        if(sprite.flipX == true)
+        {
+            
+            ataqueEspada.AtaqueIzdo();
+
+
+        }else
+        {
+
+            ataqueEspada.AtaqueDcho();
+
+        }
 
     }
 
@@ -59,6 +72,7 @@ public class ControladorJugador : MonoBehaviour
     {
 
         cooldownMovimiento = 0.25f;
+        
         
 
     }
@@ -84,7 +98,7 @@ public class ControladorJugador : MonoBehaviour
         {
 
             rb.velocity = new Vector2(dirMovimiento.x * velMovimiento, dirMovimiento.y * velMovimiento);
-
+            
         }
     }
 }

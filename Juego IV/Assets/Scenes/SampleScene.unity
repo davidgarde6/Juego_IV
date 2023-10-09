@@ -702,21 +702,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1871359545001234368, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c88cf68e7abbe5b42b840c66add39d5e, type: 3}
     - target: {fileID: 2849659503872805289, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
       propertyPath: m_Name
       value: Jugador
-      objectReference: {fileID: 0}
-    - target: {fileID: 2916031630168692649, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2916031630168692649, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2916031630168692649, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -757,26 +745,6 @@ PrefabInstance:
     - target: {fileID: 2916031630168692649, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364287070563233042, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
-      propertyPath: velMovimiento
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6658261540494177275, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6658261540494177275, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
-      propertyPath: m_Size.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6658261540494177275, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 6658261540494177275, guid: a5aa1c85cbcde2a42bdf207a5c52984c, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
