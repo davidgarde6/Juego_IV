@@ -15,6 +15,9 @@ public class ControladorJugador : MonoBehaviour
     private Vector2 dirMovimiento;
 
     // Update is called once per frame
+
+    public GameObject player;
+
     void Update()
     {
 
@@ -26,7 +29,7 @@ public class ControladorJugador : MonoBehaviour
     void FixedUpdate()
     {
 
-        // Calcular físicas
+        //Calcular físicas
         Mover();
 
     }
@@ -72,9 +75,7 @@ public class ControladorJugador : MonoBehaviour
     {
 
         cooldownMovimiento = 0.25f;
-        
-        
-
+      
     }
 
     void reducirCooldowns()
@@ -98,7 +99,9 @@ public class ControladorJugador : MonoBehaviour
         {
 
             rb.velocity = new Vector2(dirMovimiento.x * velMovimiento, dirMovimiento.y * velMovimiento);
-            
+          
         }
     }
+
+
 }

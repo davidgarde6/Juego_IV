@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 2592116154647548064}
   - component: {fileID: 4834733745370135222}
   - component: {fileID: 5552177824710748364}
-  - component: {fileID: 1034398093338532668}
+  - component: {fileID: 187332682323415389}
   - component: {fileID: 4565765382636001398}
   - component: {fileID: 7988438099927611191}
   m_Layer: 0
-  m_Name: Goomba
+  m_Name: Avispa
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 232499822f834064e8d9bdbeb6d63136, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c65b764b6eb01e842961bc2c56e3410b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,8 +116,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &1034398093338532668
-CircleCollider2D:
+--- !u!61 &187332682323415389
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,7 +131,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -148,9 +148,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.7178049, y: 1.3000062}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 23.88, y: 16.685682}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 6.5
+  m_Size: {x: 7.4175434, y: 6.120898}
+  m_EdgeRadius: 0
 --- !u!114 &4565765382636001398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af4c3ed3d259b34db73c7aeae8dc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 1
 --- !u!1 &7375846974572491251
 GameObject:
   m_ObjectHideFlags: 0

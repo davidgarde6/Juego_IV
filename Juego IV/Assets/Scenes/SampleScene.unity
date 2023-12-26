@@ -1005,7 +1005,7 @@ GameObject:
   - component: {fileID: 1279624532}
   - component: {fileID: 1279624531}
   - component: {fileID: 1279624530}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 1623182832}
   - component: {fileID: 1623182831}
   - component: {fileID: 1623182830}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1405,7 @@ GameObject:
   - component: {fileID: 1816664686}
   - component: {fileID: 1816664685}
   - component: {fileID: 1816664684}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1563,7 +1563,7 @@ GameObject:
   - component: {fileID: 1943551073}
   - component: {fileID: 1943551072}
   - component: {fileID: 1943551071}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1783,6 +1783,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2592116154647548064, guid: 103cd3fa602f8a143bfa1a0e0ecd4d23, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592116154647548064, guid: 103cd3fa602f8a143bfa1a0e0ecd4d23, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592116154647548064, guid: 103cd3fa602f8a143bfa1a0e0ecd4d23, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.310815
       objectReference: {fileID: 0}
@@ -1824,7 +1832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3911515389412642972, guid: 103cd3fa602f8a143bfa1a0e0ecd4d23, type: 3}
       propertyPath: m_Name
-      value: Goomba
+      value: Avispa
       objectReference: {fileID: 0}
     - target: {fileID: 4565765382636001398, guid: 103cd3fa602f8a143bfa1a0e0ecd4d23, type: 3}
       propertyPath: jugador

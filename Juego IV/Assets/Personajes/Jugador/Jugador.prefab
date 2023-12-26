@@ -225,9 +225,10 @@ MonoBehaviour:
   velMovimiento: 10
   rb: {fileID: 5131468097765890736}
   cooldownGolpe: 2
-  cooldownMovimiento: 0.5
-  ataqueEspada: {fileID: 693358818242852568}
-  sprite: {fileID: 1871359545001234368}
+  cooldownMovimiento: 0.25
+  ataqueEspada: {fileID: 0}
+  sprite: {fileID: 0}
+  player: {fileID: 2849659503872805289}
 --- !u!50 &5131468097765890736
 Rigidbody2D:
   serializedVersion: 4
