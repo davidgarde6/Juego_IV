@@ -8,6 +8,7 @@ TagManager:
   - Zona
   - Golpe
   - Enemigo
+  - Muro
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Obstacles
   - Water
   - UI
-  - 
+  - Bullet
   - 
   - 
   - 

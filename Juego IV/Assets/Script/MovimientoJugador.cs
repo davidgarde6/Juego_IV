@@ -48,7 +48,6 @@ public class MovimientoJugador : MonoBehaviour
     void Golpear()
     {
 
-        Debug.Log("Golpea");
         cooldownGolpe = 2.0f;
 
     }

@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af4c3ed3d259b34db73c7aeae8dc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantidadPuntos: 100
   vida: 1
 --- !u!1 &7375846974572491251
 GameObject:

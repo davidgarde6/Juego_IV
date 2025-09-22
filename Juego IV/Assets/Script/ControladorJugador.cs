@@ -1,28 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControladorJugador : MonoBehaviour
 {
-    public float velMovimiento = 10;
+    public static ControladorJugador Instance;
+    public float velMovimiento = 6;
     public Rigidbody2D rb;
-    public float cooldownGolpe = 2.0f;
-    public float cooldownMovimiento = 0.25f;
-    public AtaqueEspada ataqueEspada;
     public SpriteRenderer sprite;
+    public Animator animator;
 
+    [SerializeField] private Transform bulletPosition;
     private float moverX, moverY;
     private Vector2 dirMovimiento;
-
     // Update is called once per frame
 
     public GameObject player;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Update()
     {
 
         ProcesarEntradas();
-        reducirCooldowns();
         
     }
 
@@ -37,70 +41,80 @@ public class ControladorJugador : MonoBehaviour
     void ProcesarEntradas()
     {
 
-        moverX = Input.GetAxisRaw("Horizontal");
-        moverY = Input.GetAxisRaw("Vertical");
-
-        
-        if (Input.GetKeyDown(KeyCode.Space) && cooldownGolpe <= 0)
+        if (Singleton.Instance.IsActive())
         {
 
-            detenerMovimiento();
-            Golpear();
+            moverX = Input.GetAxisRaw("Horizontal");
+            moverY = Input.GetAxisRaw("Vertical");
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+
+                sprite.flipX = true;
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+
+                if (sprite.flipX)
+                {
+
+                    sprite.flipX = false;
+
+                }
+
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+                Disparar();
+
+            }
+
+            dirMovimiento = new Vector2(moverX, moverY).normalized;
 
         }
+    }
 
-        dirMovimiento = new Vector2(moverX, moverY).normalized;
+    private void Disparar()
+    {
+
+        GameObject bullet = ObjectPool.Instance.GetPooledObject();
+
+        if (bullet != null)
+        {
+            bullet.transform.position = bulletPosition.position;
+            bullet.SetActive(true);
+
+        }
+    }
+
+    private void Mover()
+    {
+
+        rb.velocity = new Vector2(dirMovimiento.x * velMovimiento, dirMovimiento.y * velMovimiento);
 
     }
 
-    void Golpear()
+    public bool IsFlipped()
     {
 
-        if(sprite.flipX == true)
-        {
-            
-            ataqueEspada.AtaqueIzdo();
-
-
-        }else
-        {
-
-            ataqueEspada.AtaqueDcho();
-
-        }
+        return sprite.flipX;
 
     }
 
-    void detenerMovimiento()
+    private void OnCollisionEnter2D(Collision2D other)
     {
 
-        cooldownMovimiento = 0.25f;
-      
-    }
-
-    void reducirCooldowns()
-    {
-
-        if (cooldownGolpe > 0)
+        if (other.gameObject.CompareTag("Enemigo"))
         {
 
-            cooldownGolpe -= Time.deltaTime;
+            Singleton.Instance.RestarVidas();
+            animator.SetBool("isHit", true);
 
         }
 
-        cooldownMovimiento -= Time.deltaTime;
-
-    }
-
-    void Mover()
-    {
-
-        if(cooldownMovimiento <= 0)
-        {
-
-            rb.velocity = new Vector2(dirMovimiento.x * velMovimiento, dirMovimiento.y * velMovimiento);
-          
-        }
     }
 
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZonaDeteccion : MonoBehaviour
 {
-    public Collider2D collider;
+
     public List<Collider2D> objetosDetectados = new List<Collider2D>();
 
     // Start is called before the first frame update
